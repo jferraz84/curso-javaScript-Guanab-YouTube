@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detran</title>
+</head>
+
+<body>
+    <h1>Sistema de Infrações</h1>
+    Velocidade do carro: <input type="number" name="txtvel" id="txtvel"> km/h
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="resultado">
+
+        <script>
+            function calcular() {
+                var txtv = document.querySelector('input#txtvel');
+                var resultado = document.querySelector('div#resultado');
+                var vel = Number(txtv.value);
+                resultado.innerHTML = `<p>Sua velocidade  atual é de <strong>${vel}</strong> km/h</p>`;
+                resultado.innerHTML += '<p>O limite da Via é de <strong>60 km/h</strong></P>'
+
+
+                if (vel >= 61 && vel <= 75) {
+                    resultado.innerHTML += '<p>Você foi <strong>MULTADO</strong></P>'
+                    resultado.innerHTML += '<p>Sua Infração é <strong>LEVE</strong> com perca de <strong>4 pontos</strong> na habilitação e no valor de <strong>R$ 185,00</strong> de multa<p/>';
+
+                } else if (vel >= 76 && vel <= 90) {
+                    resultado.innerHTML += '<p>Você foi <strong>MULTADO</strong></P>'
+                    resultado.innerHTML += '<p>Sua Infração é <strong>GRAVE</strong> com perca de <strong>5 pontos</strong> na habilitação e no valor de <strong>R$ 235,00</strong> de multa</p>';
+
+                } else if (vel > 91) {
+                    resultado.innerHTML += '<p>Você foi <strong>MULTADO</strong></P>'
+                    resultado.innerHTML += '<p>Sua Infração é <strong>GRAVISSIMA</strong> com perca de <strong>7 pontos</strong> na habilitação e no valor de <strong>R$ 370,00</strong> de multa</p>';
+                }
+
+            }    
+        </script>
+</body>
+
+</html>

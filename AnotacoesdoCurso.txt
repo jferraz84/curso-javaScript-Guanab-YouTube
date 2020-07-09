@@ -1,0 +1,95 @@
+Curso de javaScript do Curso em video
+
+Livros sugeridos:
+
+javaScript -  O guia definitivo
+javaScript - Guia do Programador
+Guia de 
+
+* Para converter uma Variavel recebida como string em numero direto uso:
+
+parseInt,  Number.parseInt ou só Number....
+
+* Para converter uma variavel recebida como numero para string direto uso:
+
+String(numero recebido) ou n.toString();
+---------------------------------------------------------------------------------
+* Para concatenação de varias variaveis, pode ser usado o comando placeholder
+ex, em vez disso:
+ 'O aluno ' + nome + ' com idade de ' + idade + ' anos, tirou a nota ' + nota + ' no exame final'
+ pode ser usado isso com uso de crase `` e ${}:
+
+`O aluno ${nome} com idade de ${idade} anos, tirou a nota ${nota} no exame semestral`
+------------------------------------------------------------------------------------
+* Formatando numero de casa decimais dos valores
+
+var n1 = 1545.5;
+> n1.toFixed(2) // Para 2 casas decimais.
+'1545.50'
+
+Para conversão de '.' para ',' : // trocar ponto por vírgula.
+> n1.toFixed(2).replace('.'  ,  ',');
+'1545,50'
+
+* Mostrando valor monetário de um país
+
+> n1.toLocaleString('pt-br' , {style: 'currency' , currency: 'BRL'});
+'R$ 1,545.50' // REAL
+
+> n1.toLocaleString('pt-br' , {style: 'currency' , currency: 'USD'});
+'US$ 1,545.50'  // DÓLAR
+
+> n1.toLocaleString('pt-br' , {style: 'currency' , currency: 'EUR'});
+'€ 1,545.50'   // EURO
+
+> n1.toLocaleString('pt-br' , {style: 'currency' , currency: 'YEN'});
+'YEN 1,545.50'   // YEN (JAPÃO)
+---------------------------------------------------------------------------------
+* Ordem da Precedência das operações aritmeticas em programção
+()       = Parenteses
+**       = Potenicas
+*  /  %  = Multiplicação, Divisão e Resto da Divisão
++  -     = Adição e Subtração
+----------------------------------------------------------------------------------
+* Ordem da Precedência das operações lógicas em programção
+() **  /    = Operadores aritméticos
+> < >= <=   = Operadores relacionais sem ordem de procedencia, quem chega primeiro é feito
+!  &&  ||   = Operadores Lógicos com ordem de precedencia:  NÃO, EE,  OU.
+
+* Operadores ternários :
+?  :  =   EX: teste ? true : false   -   media >+ 
+             
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imigração</title>
+</head>
+
+<body>
+    <h1>Sistema de Imigração do Brasil</h1>
+    <p><h3>Verificando Nacionalidade:</h3></p>
+    Em que pais nasceu: <input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="Buscar" onclick="analisar()">
+    <div id="resultado">
+
+        <script>
+            function analisar() {
+                var pais = "brasil";
+                var res = document.querySelector('input#txtpais');
+                var resultado = document.querySelector('div#resultado');
+                if (pais == res) {
+                    resultado.innerHTML += '<p>Sua situação no momento é de <strong>BRASILEIRO(a)</strong></P>'
+                } else {
+                    resultado.innerHTML += '<p>Sua situação no momento é de <strong>ESTRANGEIRA</strong></P>'
+                }
+
+            }
+        </script>
+</body>
+
+</html>
